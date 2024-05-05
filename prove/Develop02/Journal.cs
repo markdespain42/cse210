@@ -18,7 +18,7 @@ public class Journal
     public string SavingFile(string fileName) {
         foreach (Entry entry in _entries)
         {
-            Console.WriteLine($"{entry.date()} | {entry.prompt()} | {entry.entry()}");
+            Console.WriteLine();
         }
         return "";
     } 

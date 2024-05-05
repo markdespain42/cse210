@@ -5,7 +5,7 @@ class PromptGenerator
         private static string GetRandomPrompt()
     {
          string[] prompts = {
-            "Who was the most interesting person I interacted with today?",
+            "What helped me continue going throughout the day?",
             "What inspired me the most today?",
             "What was a mistake I made today? How would I fix it?",
             "What was the best part of the day?",
