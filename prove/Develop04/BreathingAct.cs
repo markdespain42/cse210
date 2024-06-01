@@ -1,20 +1,20 @@
 using System;
 
-public class BreathingAct
+public class BreathingAct : Activity
 {
-    public string _text;
-    public static void Display()
-    {
-        Console.WriteLine("This activity is designed you help you relax and focus on your breathing.");
-
-        Console.WriteLine("How long, in seconds, would you like for your session?");
-        string seconds = Console.ReadLine();
-        int time = int.Parse(seconds);
-
-        for (int i = time; i > 0; i--)
-        {
-            Console.WriteLine(i);
-        }
-        
+    public static void BreathingDisplay(string _activityName, string _description)
+    {   
+        BreathingAct breathing = new BreathingAct();
+        breathing.StartActivity(_activityName, _description);
+        Console.WriteLine($"Breathing in... breathing.Countdown(_duration / 6)");
+        Console.WriteLine("Breathing out... breathing.Countdown(_duration / 6)");
+        Console.WriteLine($"Breathing in... breathing.Countdown(_duration / 6)");
+        Console.WriteLine("Breathing out... breathing.Countdown(_duration / 6)");
+        Console.WriteLine($"Breathing in... breathing.Countdown(_duration / 6)");
+        Console.WriteLine("Breathing out... breathing.Countdown(_duration / 6)");
+        Console.WriteLine("Congratulations! ");
+        breathing.Spinner(5);
+        Console.WriteLine("You have completed another " + breathing._duration + " seconds of the activity.");
     }
+
 }
