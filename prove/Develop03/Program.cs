@@ -14,6 +14,7 @@ class Program
 
         WordRandom wordRandom = new WordRandom();
 
+
         for (int i = 0; i < wordRandom.txt.Length; i++)
         {
             string randomWord = wordRandom.GetRandomWord();
