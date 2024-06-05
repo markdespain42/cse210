@@ -18,8 +18,14 @@ public class Order {
 
         return "";
     }
-    public int OrderPrice(int productPrice) {
+    public int OrderPrice(int productPrice, string _country) {
         int total = 0;
+        if (_country == "USA") {
+            total = 5;
+        }
+        else {
+            total = 35;
+        }
         foreach (string product in _products) {
             total += productPrice;
         }
