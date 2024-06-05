@@ -8,8 +8,8 @@ public class WordRandom
 
     public string GetRandomWord()
     {
-        _word = txt[random.Next(0, txt.Length)];
-        return _word;
+        int index = random.Next(txt.Length);
+        return txt[index];
     }
     public string MakeUnderline(string wordRandom)
     {

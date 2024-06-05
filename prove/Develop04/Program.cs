@@ -6,7 +6,7 @@ class Program
     {
         Activity activity = new Activity();
 
-        activity.Activity();
+        activity.ActivityStart();
 
     }
 }

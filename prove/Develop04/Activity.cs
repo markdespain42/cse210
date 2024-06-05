@@ -11,7 +11,7 @@ public class Activity
     ReflectingAct reflecting = new ReflectingAct();
     BreathingAct breathing = new BreathingAct();
     ListingAct listing = new ListingAct();
-    public Activity()
+    public void ActivityStart()
     {
         int i = 0;
         while (i < 1) {
@@ -28,21 +28,21 @@ public class Activity
         {
             _activityName = "Reflecting activity";
             _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
-            reflecting.ReflectDisplay(_activityName, _description);
+            ReflectingAct.ReflectDisplay(_activityName, _description);
             reflecting.EndActivity();
         }
         else if (newOption == 2)
         {
             _activityName = "Breathing activity";
             _description = "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.";
-            breathing.BreathingDisplay(_activityName, _description);
+            BreathingAct.BreathingDisplay(_activityName, _description);
             breathing.EndActivity();
         }
         else if (newOption == 3)
         {
             _activityName = "Listing activity";
             _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
-            listing.ListingDisplay(_activityName, _description);
+            ListingAct.ListingDisplay(_activityName, _description);
             listing.EndActivity();
         }
         else if (newOption == 4)

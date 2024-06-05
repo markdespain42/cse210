@@ -15,7 +15,7 @@ class Program
         WordRandom wordRandom = new WordRandom();
 
 
-        for (int i = 0; i < wordRandom.txt.Length; i++)
+        for (int i = 0; i < wordRandom.GetRandomWord().Length; i++)
         {
             string randomWord = wordRandom.GetRandomWord();
             string underlinedWord = wordRandom.MakeUnderline(randomWord);
