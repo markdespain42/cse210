@@ -2,26 +2,28 @@ using System;
 
 public class Running : Activity {
 
-    public override string Calculate()
-    {
-        //distance
+    private int _distance;
+    private int _minutes;
 
-        return "";
+    public void RunningInfo(int minutes, int distance) {
+        //distance
+        _distance= distance;
+        _minutes = minutes;
     }
     public override int Distance() {
 
-        return 0;
+        return _distance;
     }
-    public override string Pace() {
+    public override int Pace() {
 
-        return "";
+        return (_minutes / _distance);
     }
 
-    public override string Speed() {
+    public override int Speed() {
 
-        return "";
+        return (_distance / _minutes) * 60;
     }
-    public override string GetSummary(string date, string time, string distance, string speed, string pace) {
-        return $"Date: {date}\nTime: {time}\nDistance: {distance}\nSpeed: {speed}\nPace: {pace}";
+    public override string GetSummary() {
+        return $"{_date.ToShortDateString()} {GetType().Name} ({_duration} min) - Distance: {Distance():0.0} miles, Speed: {Speed():0.0} mph, Pace: {Pace():0.0} min per mile";
     }
 }

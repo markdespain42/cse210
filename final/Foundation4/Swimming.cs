@@ -2,25 +2,27 @@ using System;
 
 public class Swimming : Activity {
 
-    public override string Calculate()
-    {
-        //number of laps. Each lap is 50 meters
-        return "";
+    private int _minutes;
+    private int _laps;
+
+
+    public void SwimmingInfo(int minutes, int laps) {
+        _minutes = minutes;
+        _laps = laps;
     }
     public override int Distance() {
-        int distance = 0;
-        return distance;
+        return (int)(_laps * 50.0/1000.0 * 0.62);
     }
-    public override string Pace() {
+    public override int Pace() {
 
-        return "";
+        return (_minutes / Distance());
     }
 
-    public override string Speed() {
+    public override int Speed() {
 
-        return "";
+        return (Distance() / _minutes) * 60;
     }
-    public override string GetSummary(string date, string time, string distance, string speed, string pace) {
-        return $"Date: {date}\nTime: {time}\nDistance: {distance}\nSpeed: {speed}\nPace: {pace}";
+    public override string GetSummary() {
+        return $"{_date.ToShortDateString()} {GetType().Name} ({_duration} min) - Distance: {Distance():0.0} miles, Speed: {Speed():0.0} mph, Pace: {Pace():0.0} min per mile";
     }
 }
